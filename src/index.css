@@ -511,11 +511,19 @@ a:not(.btn):hover {
 }
 .btn.btn-main, .icon-btn.btn-main {
   background-color: hsl(210, 96%, 40%);
+  color: hsl(210, 0%, 98%);
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+}
+.btn.btn-main *, .icon-btn.btn-main * {
+  color: hsl(210, 0%, 98%);
 }
 @media (prefers-color-scheme: dark) {
   .btn.btn-main, .icon-btn.btn-main {
     background-color: hsl(32, 96%, 48%);
+    color: hsl(210, 0%, 98%);
+  }
+  .btn.btn-main *, .icon-btn.btn-main * {
+    color: hsl(210, 0%, 98%);
   }
 }
 .btn.btn-main:hover, .icon-btn.btn-main:hover {
@@ -644,16 +652,23 @@ input:focus {
 }
 .App {
   background-color: hsl(210, 0%, 98%);
-  color: hsl(210, 0%, 98%);
+  color: hsl(210, 100%, 2%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100dvh;
   width: 100dvw;
 }
+.App * {
+  color: hsl(210, 100%, 2%);
+}
 @media (prefers-color-scheme: dark) {
   .App {
     background-color: #011428;
+    color: hsl(210, 0%, 98%);
+  }
+  .App * {
+    color: hsl(210, 0%, 98%);
   }
 }
 
@@ -684,7 +699,88 @@ input:focus {
 }
 
 #main-container {
+  height: 100%;
+  overflow-y: scroll;
   padding: 32px;
+}
+#main-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  margin-left: 8px;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+}
+#main-container form h3 {
+  font-size: 19px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  #main-container form h3 {
+    font-size: 20.52px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main-container form h3 {
+    font-size: 22.1616px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container form h3 {
+    font-size: 23.934528px;
+  }
+}
+#main-container form input[type=text] {
+  padding: 16px 24px;
+  border-radius: 32px;
+}
+#main-container form .btn {
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.16s ease-in-out;
+}
+#main-container form .btn:hover {
+  scale: 0.96;
+}
+@media (prefers-color-scheme: dark) {
+  #main-container form {
+    background-color: hsl(210, 0%, 98%);
+    color: hsl(210, 100%, 2%);
+  }
+  #main-container form * {
+    color: hsl(210, 100%, 2%);
+  }
+  #main-container form .btn {
+    color: hsl(210, 0%, 98%);
+  }
+}
+#main-container section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 32px 40px 32px;
+}
+#main-container section h4 {
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  #main-container section h4 {
+    font-size: 17.28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main-container section h4 {
+    font-size: 18.6624px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container section h4 {
+    font-size: 20.155392px;
+  }
 }
 #main-container ul {
   display: flex;
@@ -693,21 +789,22 @@ input:focus {
   align-items: center;
   gap: 32px;
 }
-
-li {
+#main-container ul li {
   position: relative;
   top: 0;
   left: 0;
   padding: 48px;
   border-radius: 16px;
-  margin-left: 20px;
+  margin-left: 8px;
   background-color: rgba(0, 0, 0, 0.08);
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
-li p {
+#main-container ul li p {
   font-weight: 600;
 }
-li p:first-of-type {
+#main-container ul li p:first-of-type {
+  background-color: hsl(210, 96%, 40%);
+  color: hsl(210, 0%, 98%);
   position: absolute;
   top: -20px;
   left: -20px;
@@ -717,12 +814,11 @@ li p:first-of-type {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: hsl(210, 96%, 40%);
 }
-li p:last-of-type {
-  color: hsl(210, 100%, 2%);
+#main-container ul li p:first-of-type * {
+  color: hsl(210, 0%, 98%);
 }
-li button {
+#main-container ul li button {
   font-size: 19px;
   position: absolute;
   top: 12px;
@@ -737,29 +833,36 @@ li button {
   transition: all 0.16s ease-in-out;
 }
 @media screen and (min-width: 600px) {
-  li button {
+  #main-container ul li button {
     font-size: 20.52px;
   }
 }
 @media screen and (min-width: 768px) {
-  li button {
+  #main-container ul li button {
     font-size: 22.1616px;
   }
 }
 @media screen and (min-width: 992px) {
-  li button {
+  #main-container ul li button {
     font-size: 23.934528px;
   }
 }
-li button:hover {
+#main-container ul li button:hover {
   background-color: rgba(0, 0, 0, 0.16);
 }
 @media (prefers-color-scheme: dark) {
-  li {
+  #main-container ul li {
     background-color: hsl(210, 0%, 98%);
+    color: hsl(210, 100%, 2%);
+  }
+  #main-container ul li * {
+    color: hsl(210, 100%, 2%);
+  }
+  #main-container ul li p:first-of-type {
+    background-color: hsl(32, 96%, 48%);
     color: hsl(210, 0%, 98%);
   }
-  li p:first-of-type {
-    background-color: hsl(32, 96%, 48%);
+  #main-container ul li p:first-of-type * {
+    color: hsl(210, 0%, 98%);
   }
 }/*# sourceMappingURL=index.css.map */
