@@ -1,5 +1,6 @@
 import HeaderContainer from './components/layout/HeaderContainer'
 import FooterContainer from './components/layout/FooterContainer'
+import FeedbackItem from './components/FeedbackItem'
 
 function App () {
 
@@ -13,7 +14,7 @@ function App () {
 
       <main id="main-container">
 
-        <h3>My App</h3>
+        <FeedbackItem />
 
       </main>
 

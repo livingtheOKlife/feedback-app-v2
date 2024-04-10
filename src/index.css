@@ -511,7 +511,7 @@ a:not(.btn):hover {
 }
 .btn.btn-main, .icon-btn.btn-main {
   background-color: hsl(210, 96%, 40%);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 8px, rgba(0, 0, 0, 0.16) 0px 4px 8px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
 @media (prefers-color-scheme: dark) {
   .btn.btn-main, .icon-btn.btn-main {
@@ -519,7 +519,7 @@ a:not(.btn):hover {
   }
 }
 .btn.btn-main:hover, .icon-btn.btn-main:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.08) 0px 2px 4px;
 }
 .btn:hover, .icon-btn:hover {
   scale: 0.96;
@@ -681,4 +681,46 @@ input:focus {
   width: 100%;
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.32);
+}
+
+#main-container {
+  padding: 32px;
+}
+
+li {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 48px;
+  border-radius: 16px;
+  margin-left: 20px;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+}
+li p {
+  font-weight: 600;
+}
+li p:first-of-type {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: hsl(210, 96%, 40%);
+}
+li p:last-of-type {
+  color: hsl(210, 100%, 2%);
+}
+@media (prefers-color-scheme: dark) {
+  li {
+    background-color: hsl(210, 0%, 98%);
+    color: hsl(210, 0%, 98%);
+  }
+  li p:first-of-type {
+    background-color: hsl(32, 96%, 48%);
+  }
 }/*# sourceMappingURL=index.css.map */
