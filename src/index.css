@@ -686,6 +686,13 @@ input:focus {
 #main-container {
   padding: 32px;
 }
+#main-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
 
 li {
   position: relative;

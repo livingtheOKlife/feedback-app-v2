@@ -1,8 +1,14 @@
+import { useState } from 'react'
+
+import feedbackData from './data/feedbackData'
+
 import HeaderContainer from './components/layout/HeaderContainer'
 import FooterContainer from './components/layout/FooterContainer'
-import FeedbackItem from './components/FeedbackItem'
+import FeedbackList from './components/FeedbackList'
 
 function App () {
+
+  const [feedback, setFeedback] = useState(feedbackData)
 
   return (
 
@@ -14,7 +20,7 @@ function App () {
 
       <main id="main-container">
 
-        <FeedbackItem />
+        <FeedbackList feedback={feedback} />
 
       </main>
 
