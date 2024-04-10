@@ -708,8 +708,8 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
+  gap: 32px;
+  padding: 32px;
   border-radius: 16px;
   margin-left: 8px;
   background-color: rgba(0, 0, 0, 0.08);
@@ -733,6 +733,13 @@ input:focus {
   #main-container form h3 {
     font-size: 23.934528px;
   }
+}
+#main-container form .rating-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 32px;
 }
 #main-container form input[type=text] {
   padding: 16px 24px;

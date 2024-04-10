@@ -4,9 +4,12 @@ import Button from './shared/Button'
 
 import { FaTimes } from 'react-icons/fa'
 
+import RatingSelect from './RatingSelect'
+
 function FeedbackForm () {
 
   const [text, setText] = useState('')
+  const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [alert, setAlert] = useState('')
 
@@ -41,7 +44,7 @@ function FeedbackForm () {
 
       <h3>How would you rate our service?</h3>
 
-      {/* @todo - ratings select */}
+      <RatingSelect select={(rating) => setRating(rating)} />
 
       <input type="text" id='text' value={text} placeholder='Write a review...' onChange={onChange} />
 
