@@ -676,15 +676,23 @@ input:focus {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.32);
 }
-#header-container .wrapper {
+#header-container #main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1100px;
   padding: 16px;
   margin: 0 auto;
 }
-#header-container .wrapper h2 {
+#header-container #main-nav h2 {
   padding: 8px;
   font-size: 24px;
+}
+#header-container #main-nav .links a {
+  padding: 8px;
+  margin: 0 6px;
+  color: hsl(210, 0%, 98%);
 }
 
 #footer-container {
@@ -898,6 +906,37 @@ input:focus {
     color: hsl(210, 0%, 98%);
   }
   #main-container ul li p:first-of-type * {
+    color: hsl(210, 0%, 98%);
+  }
+}
+
+#main-container.about, #main-container.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+#main-container.about p.me, #main-container.not-found p.me {
+  margin-top: 32px;
+}
+#main-container.about .btn, #main-container.not-found .btn {
+  margin-top: 32px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  transition: all 0.16s ease-in-out;
+}
+#main-container.about .btn:hover, #main-container.not-found .btn:hover {
+  scale: 0.96;
+}
+#main-container.about .btn:disabled, #main-container.not-found .btn:disabled {
+  background-color: rgba(0, 0, 0, 0.16);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+  scale: 1;
+}
+@media (prefers-color-scheme: dark) {
+  #main-container.about .btn, #main-container.not-found .btn {
     color: hsl(210, 0%, 98%);
   }
 }/*# sourceMappingURL=index.css.map */

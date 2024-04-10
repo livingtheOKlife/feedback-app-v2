@@ -1,14 +1,23 @@
+import { Link } from 'react-router-dom'
+
 function HeaderContainer () {
 
   return (
 
     <header id="header-container">
+      
+      <nav id="main-nav">
 
-      <div className="wrapper">
+        <Link>
+          <h2>Feedback UI</h2>
+        </Link>
 
-        <h2>Feedback App</h2>
-
-      </div>
+        <div className="links">
+          <Link to='/'>Home</Link>
+          <Link to='/about'>About</Link>
+        </div>
+        
+      </nav>
 
     </header>
 
