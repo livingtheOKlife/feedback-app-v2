@@ -722,6 +722,38 @@ li p:first-of-type {
 li p:last-of-type {
   color: hsl(210, 100%, 2%);
 }
+li button {
+  font-size: 19px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.16s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+  li button {
+    font-size: 20.52px;
+  }
+}
+@media screen and (min-width: 768px) {
+  li button {
+    font-size: 22.1616px;
+  }
+}
+@media screen and (min-width: 992px) {
+  li button {
+    font-size: 23.934528px;
+  }
+}
+li button:hover {
+  background-color: rgba(0, 0, 0, 0.16);
+}
 @media (prefers-color-scheme: dark) {
   li {
     background-color: hsl(210, 0%, 98%);

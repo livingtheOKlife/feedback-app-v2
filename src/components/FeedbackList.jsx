@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import FeedbackItem from './FeedbackItem'
 
-function FeedbackList ({ feedback }) {
+function FeedbackList ({ feedback, deleteFeedback }) {
 
   return (
 
@@ -14,7 +14,7 @@ function FeedbackList ({ feedback }) {
 
         {
           feedback.map((item) => (
-            <FeedbackItem item={item} key={item.id} />
+            <FeedbackItem item={item} deleteFeedback={deleteFeedback} key={item.id} />
           ))
         }
 
