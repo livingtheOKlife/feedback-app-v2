@@ -6,7 +6,7 @@ import { FaTimes } from 'react-icons/fa'
 
 import RatingSelect from './RatingSelect'
 
-function FeedbackForm () {
+function FeedbackForm ({ addFeedback }) {
 
   const [text, setText] = useState('')
   const [rating, setRating] = useState(10)
@@ -36,11 +36,27 @@ function FeedbackForm () {
 
   }
 
-  const onClick = () => {}
+  const onSubmit = (e) => {
+
+    e.preventDefault()
+
+    if (text.trim().length > 10) {
+
+      const newFeedback = {
+        text,
+        rating
+      }
+
+      addFeedback(newFeedback)
+      setText('')
+
+    }
+
+  }
   
   return (
 
-    <form>
+    <form onSubmit={onSubmit}>
 
       <h3>How would you rate our service?</h3>
 
@@ -57,7 +73,7 @@ function FeedbackForm () {
                   </p>
       }
 
-      <Button type='submit' className='main' disabled={btnDisabled} onClick={onClick}>Send</Button>
+      <Button type='submit' className='main' disabled={btnDisabled}>Send</Button>
 
     </form>
 
