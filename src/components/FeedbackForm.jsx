@@ -1,10 +1,39 @@
 import { useState } from 'react'
 
+import Button from './shared/Button'
+
+import { FaTimes } from 'react-icons/fa'
+
 function FeedbackForm () {
 
   const [text, setText] = useState('')
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [alert, setAlert] = useState('')
 
-  const onChange = (e) => setText(e.target.value)
+  const onChange = (e) => {
+
+    if (text === '') {
+
+      setBtnDisabled(true)
+      setAlert(null)
+
+    } else if (text !== '' && text.trim().length <= 10) {
+
+      setBtnDisabled(true)
+      setAlert('Review must be 10 characters or more')
+
+    } else {
+
+      setBtnDisabled(false)
+      setAlert(null)
+      
+    }
+
+    setText(e.target.value)
+
+  }
+
+  const onClick = () => {}
   
   return (
 
@@ -16,7 +45,16 @@ function FeedbackForm () {
 
       <input type="text" id='text' value={text} placeholder='Write a review...' onChange={onChange} />
 
-      <button type='submit' className="btn btn-main">Send</button>
+      {
+        alert && <p className="xs">
+                    <div className="bg">
+                      <FaTimes />
+                    </div>
+                    {alert}
+                  </p>
+      }
+
+      <Button type='submit' className='main' disabled={btnDisabled} onClick={onClick}>Send</Button>
 
     </form>
 
