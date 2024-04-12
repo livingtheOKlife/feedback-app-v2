@@ -918,6 +918,7 @@ label.copyright {
   color: hsl(210, 0%, 98%);
 }
 #main-container form input[type=text] {
+  width: 100%;
   padding: 16px 24px;
   border-radius: 32px;
 }
@@ -1091,7 +1092,9 @@ label.copyright {
   text-align: center;
 }
 #main-container.about p.me, #main-container.not-found p.me {
-  margin-top: 32px;
+  width: 100%;
+  max-width: 550px;
+  margin: 32px auto 0 auto;
 }
 #main-container.about .btn, #main-container.not-found .btn {
   margin-top: 32px;
