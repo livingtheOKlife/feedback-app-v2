@@ -19,7 +19,6 @@ Button.propTypes = {
 
   type: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
-  diasbled: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired
 
 }

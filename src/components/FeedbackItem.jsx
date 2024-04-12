@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 
-import { useState } from 'react'
+import { useContext } from 'react'
+
+import FeedbackContext from '../context/FeedbackContext'
 
 import { FaTimes } from 'react-icons/fa'
 
-function FeedbackItem ({ item, deleteFeedback }) {
+function FeedbackItem ({ item }) {
 
-  const [rating, setRating] = useState(7)
-  const [text, setText] = useState('This is an example of a feedback item.')
+  const { deleteFeedback } = useContext(FeedbackContext)
 
   return (
 

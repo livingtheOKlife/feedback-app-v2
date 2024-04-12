@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 
 import FeedbackContext from '../context/FeedbackContext'
 
@@ -10,53 +10,7 @@ import RatingSelect from './RatingSelect'
 
 function FeedbackForm () {
 
-  const { addFeedback } = useContext(FeedbackContext)
-
-  const [text, setText] = useState('')
-  const [rating, setRating] = useState(10)
-  const [btnDisabled, setBtnDisabled] = useState(true)
-  const [alert, setAlert] = useState('')
-
-  const onChange = (e) => {
-
-    if (text === '') {
-
-      setBtnDisabled(true)
-      setAlert(null)
-
-    } else if (text !== '' && text.trim().length <= 10) {
-
-      setBtnDisabled(true)
-      setAlert('Review must be 10 characters or more')
-
-    } else {
-
-      setBtnDisabled(false)
-      setAlert(null)
-      
-    }
-
-    setText(e.target.value)
-
-  }
-
-  const onSubmit = (e) => {
-
-    e.preventDefault()
-
-    if (text.trim().length > 10) {
-
-      const newFeedback = {
-        text,
-        rating
-      }
-
-      addFeedback(newFeedback)
-      setText('')
-
-    }
-
-  }
+  const { onSubmit, setRating, text, onInputChange, btnDisabled, alert } = useContext(FeedbackContext)
   
   return (
 
@@ -66,13 +20,13 @@ function FeedbackForm () {
 
       <RatingSelect select={(rating) => setRating(rating)} />
 
-      <input type="text" id='text' value={text} placeholder='Write a review...' onChange={onChange} />
+      <input type="text" id='text' value={text} placeholder='Write a review...' onChange={onInputChange} />
 
       {
         alert && <p className="xs">
-                    <div className="bg">
+                    <span className="bg">
                       <FaTimes />
-                    </div>
+                    </span>
                     {alert}
                   </p>
       }
