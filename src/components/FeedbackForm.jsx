@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+
+import FeedbackContext from '../context/FeedbackContext'
 
 import Button from './shared/Button'
 
@@ -6,7 +8,9 @@ import { FaTimes } from 'react-icons/fa'
 
 import RatingSelect from './RatingSelect'
 
-function FeedbackForm ({ addFeedback }) {
+function FeedbackForm () {
+
+  const { addFeedback } = useContext(FeedbackContext)
 
   const [text, setText] = useState('')
   const [rating, setRating] = useState(10)

@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+import { FeedbackProvider } from './context/FeedbackContext'
+
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
@@ -17,24 +19,26 @@ function App () {
 
   return (
 
-    <BrowserRouter>
-      <div className="App">
+    <FeedbackProvider>
+      <BrowserRouter>
+        <div className="App">
 
-        <h1>livingtheOKlife</h1>
-        
-        <HeaderContainer />
+          <h1>livingtheOKlife</h1>
+          
+          <HeaderContainer />
 
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/not-found' element={<NotFound />} />
-            <Route path='/*' element={<NotFound />} />
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/not-found' element={<NotFound />} />
+              <Route path='/*' element={<NotFound />} />
+            </Routes>
 
-        <FooterContainer />
+          <FooterContainer />
 
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </FeedbackProvider>
 
   )
   
