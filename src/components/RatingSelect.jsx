@@ -10,55 +10,55 @@ function RatingSelect () {
 
     <div className='rating-select'>
 
-      <label>
-        <p className='me'>1</p>
+      <div className='selector'>
         <input type="radio" id="num1" name="rating" value='1' onChange={onRatingChange} checked={selected === 1} />
-      </label>
+        <label>1</label>
+      </div>
 
-      <label>
-        <p className='me'>2</p>
+      <div className='selector'>
         <input type="radio" id="num2" name="rating" value='2' onChange={onRatingChange} checked={selected === 2} />
-      </label>
+        <label>2</label>
+      </div>
 
-      <label>
-        <p className='me'>3</p>
+      <div className='selector'>
         <input type="radio" id="num3" name="rating" value='3' onChange={onRatingChange} checked={selected === 3} />
-      </label>
+        <label>3</label>
+      </div>
 
-      <label>
-        <p className='me'>4</p>
+      <div className='selector'>
         <input type="radio" id="num4" name="rating" value='4' onChange={onRatingChange} checked={selected === 4} />
-      </label>
+        <label>4</label>
+      </div>
 
-      <label>
-        <p className='me'>5</p>
+      <div className='selector'>
         <input type="radio" id="num5" name="rating" value='5' onChange={onRatingChange} checked={selected === 5} />
-      </label>
+        <label>5</label>
+      </div>
 
-      <label>
-        <p className='me'>6</p>
+      <div className='selector'>
         <input type="radio" id="num6" name="rating" value='6' onChange={onRatingChange} checked={selected === 6} />
-      </label>
+        <label>6</label>
+      </div>
 
-      <label>
-        <p className='me'>7</p>
+      <div className='selector'>
         <input type="radio" id="num7" name="rating" value='7' onChange={onRatingChange} checked={selected === 7} />
-      </label>
+        <label>7</label>
+      </div>
 
-      <label>
-        <p className='me'>8</p>
+      <div className='selector'>
         <input type="radio" id="num8" name="rating" value='8' onChange={onRatingChange} checked={selected === 8} />
-      </label>
+        <label>8</label>
+      </div>
 
-      <label>
-        <p className='me'>9</p>
+      <div className='selector'>
         <input type="radio" id="num9" name="rating" value='9' onChange={onRatingChange} checked={selected === 9} />
-      </label>
+        <label>9</label>
+      </div>
 
-      <label>
-        <p className='me'>10</p>
+      <div className='selector'>
         <input type="radio" id="num10" name="rating" value='10' onChange={onRatingChange} checked={selected === 10} />
-      </label>
+        <label>10</label>
+      </div>
 
     </div>
 

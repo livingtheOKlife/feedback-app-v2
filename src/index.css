@@ -616,6 +616,122 @@ input:focus {
   }
 }
 
+label {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.16px;
+  line-height: 1.42;
+}
+label.xl {
+  font-size: 19px;
+}
+@media screen and (min-width: 600px) {
+  label.xl {
+    font-size: 20.52px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.xl {
+    font-size: 22.1616px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.xl {
+    font-size: 23.934528px;
+  }
+}
+label.la {
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  label.la {
+    font-size: 17.28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.la {
+    font-size: 18.6624px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.la {
+    font-size: 20.155392px;
+  }
+}
+label.me {
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  label.me {
+    font-size: 15.12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.me {
+    font-size: 16.3296px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.me {
+    font-size: 17.635968px;
+  }
+}
+label.sm {
+  font-size: 12px;
+}
+@media screen and (min-width: 600px) {
+  label.sm {
+    font-size: 12.96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.sm {
+    font-size: 13.9968px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.sm {
+    font-size: 15.116544px;
+  }
+}
+label.xs {
+  font-size: 10px;
+}
+@media screen and (min-width: 600px) {
+  label.xs {
+    font-size: 10.8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.xs {
+    font-size: 11.664px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.xs {
+    font-size: 12.59712px;
+  }
+}
+label.copyright {
+  font-size: 8px;
+}
+@media screen and (min-width: 600px) {
+  label.copyright {
+    font-size: 8.64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  label.copyright {
+    font-size: 9.3312px;
+  }
+}
+@media screen and (min-width: 992px) {
+  label.copyright {
+    font-size: 10.077696px;
+  }
+}
+
 @keyframes progress-bar-drain {
   0% {
     width: 100%;
@@ -751,27 +867,51 @@ input:focus {
   align-items: center;
   margin: 0 32px;
 }
+#main-container form .rating-select .selector {
+  margin: 6px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+#main-container form .rating-select input[type=radio] {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 0;
+  z-index: 5;
+}
 #main-container form .rating-select label {
-  display: grid;
-  grid-template-areas: "grid";
+  position: absolute;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
   width: 48px;
-  margin: 6px;
+  height: 48px;
   border-radius: 50%;
-  background-color: pink;
+  background-color: hsl(210, 96%, 40%);
+  color: hsl(210, 0%, 98%);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.16s ease-in-out;
 }
 #main-container form .rating-select label * {
-  grid-area: grid;
+  color: hsl(210, 0%, 98%);
 }
-#main-container form .rating-select label p {
-  justify-self: center;
+@media (prefers-color-scheme: dark) {
+  #main-container form .rating-select label {
+    background-color: #a05703;
+    color: hsl(210, 0%, 98%);
+  }
+  #main-container form .rating-select label * {
+    color: hsl(210, 0%, 98%);
+  }
 }
-#main-container form .rating-select label input {
-  height: 48px;
-  width: 48px;
-  visibility: hidden;
+#main-container form .rating-select input[type=radio]:checked + label {
+  background-color: hsl(92, 64%, 48%);
+  color: hsl(210, 0%, 98%);
+}
+#main-container form .rating-select input[type=radio]:checked + label * {
+  color: hsl(210, 0%, 98%);
 }
 #main-container form input[type=text] {
   padding: 16px 24px;
@@ -879,6 +1019,7 @@ input:focus {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  font-size: 19px;
 }
 #main-container ul li p:first-of-type * {
   color: hsl(210, 0%, 98%);

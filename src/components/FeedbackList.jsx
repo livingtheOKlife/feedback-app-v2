@@ -12,7 +12,7 @@ function FeedbackList () {
 
     !feedback || feedback.length === 0 ?
 
-      <p className="la">No feedback yet...</p>
+      <p>No feedback yet...</p>
 
     : <ul>
 
