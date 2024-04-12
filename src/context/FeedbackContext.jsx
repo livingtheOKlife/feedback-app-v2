@@ -142,7 +142,16 @@ export function FeedbackProvider ({ children }) {
         rating
       }
 
-      addFeedback(newFeedback)
+      if (feedbackEdit.edit === true) {
+
+        updateFeedback(feedbackEdit.item.id, newFeedback)
+
+      } else {
+        
+        addFeedback(newFeedback)
+
+      }
+
       setText('')
 
     }
@@ -199,13 +208,21 @@ export function FeedbackProvider ({ children }) {
   }
 
   /**--------------------------------------------------------------------------- editFeedback */
-
+  
   const editFeedback = (item) => {
-
+    
     setFeedbackEdit({
       item: item,
       edit: true
     })
+
+  }
+  
+  /**--------------------------------------------------------------------------- updateFeedback */
+
+  const updateFeedback = (id, updatedItem) => {
+
+    setFeedback(feedback.map((item) => item.id === id ? {...item, ...updatedItem} : item))
 
   }
 
@@ -232,7 +249,8 @@ export function FeedbackProvider ({ children }) {
       deleteFeedback,
       editFeedback,
       feedbackEdit,
-      setFeedbackEdit
+      setFeedbackEdit,
+      updateFeedback
     }}>
 
       {children}
