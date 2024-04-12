@@ -880,6 +880,7 @@ label.copyright {
   height: 48px;
   opacity: 0;
   z-index: 5;
+  cursor: pointer;
 }
 #main-container form .rating-select label {
   position: absolute;
