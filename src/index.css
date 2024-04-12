@@ -751,18 +751,40 @@ input:focus {
   align-items: center;
   margin: 0 32px;
 }
+#main-container form .rating-select label {
+  display: grid;
+  grid-template-areas: "grid";
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  margin: 6px;
+  border-radius: 50%;
+  background-color: pink;
+}
+#main-container form .rating-select label * {
+  grid-area: grid;
+}
+#main-container form .rating-select label p {
+  justify-self: center;
+}
+#main-container form .rating-select label input {
+  height: 48px;
+  width: 48px;
+  visibility: hidden;
+}
 #main-container form input[type=text] {
   padding: 16px 24px;
   border-radius: 32px;
 }
-#main-container form p {
+#main-container form p.xs {
   display: flex;
   align-items: center;
   gap: 6px;
   font-weight: 600;
   color: hsl(0, 64%, 48%);
 }
-#main-container form p .bg {
+#main-container form p.xs .bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -770,7 +792,7 @@ input:focus {
   border-radius: 50%;
   background-color: #de6868;
 }
-#main-container form p .bg * {
+#main-container form p.xs .bg * {
   color: #861d1d;
 }
 #main-container form .btn {

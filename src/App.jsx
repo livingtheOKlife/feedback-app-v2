@@ -7,6 +7,12 @@ import NotFound from './pages/NotFound'
 import HeaderContainer from './components/layout/HeaderContainer'
 import FooterContainer from './components/layout/FooterContainer'
 
+/**--------------------------------------------------------------------------- App application functino
+ * 
+ * @todo radio input styling on checked
+ * 
+ * -------------------------------------------------- */
+
 function App () {
 
   return (
