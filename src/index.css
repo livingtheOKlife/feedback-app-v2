@@ -861,6 +861,7 @@ label.copyright {
   }
 }
 #main-container form .rating-select {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
