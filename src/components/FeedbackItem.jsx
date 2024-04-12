@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaEdit } from 'react-icons/fa'
 
 /**--------------------------------------------------------------------------- FeedbackItem component function
  * 
@@ -23,7 +23,7 @@ function FeedbackItem ({ item }) {
 
   // ------------------------- context
 
-  const { deleteFeedback } = useContext(FeedbackContext)
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext)
 
   // ------------------------- return
 
@@ -34,10 +34,18 @@ function FeedbackItem ({ item }) {
       <p className="xl">{item.rating}</p>
       
       <p className="me">{item.text}</p>
-      
-      <button onClick={() => deleteFeedback(item.id)}>
-        <FaTimes />
-      </button>
+
+      <div className="ctrl-panel">
+        
+        <button onClick={() => deleteFeedback(item.id)}>
+          <FaTimes />
+        </button>
+        
+        <button onClick={() => editFeedback(item)}>
+          <FaEdit />
+        </button>
+
+      </div>
       
     </li>
 

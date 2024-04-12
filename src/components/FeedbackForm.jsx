@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 import Button from './shared/Button'
 import { FaTimes } from 'react-icons/fa'
@@ -22,7 +22,21 @@ function FeedbackForm () {
 
   // ------------------------- context
 
-  const { onFormSubmit, setRating, text, onInputChange, btnDisabled, alert } = useContext(FeedbackContext)
+  const { onFormSubmit, setRating, text, setText, onInputChange, btnDisabled, alert, feedbackEdit, setBtnDisabled } = useContext(FeedbackContext)
+
+  // ------------------------- side effects
+
+  useEffect(() => {
+
+    if (feedbackEdit.edit === true) {
+
+      setBtnDisabled(false)
+      setRating(feedbackEdit.item.rating)
+      setText(feedbackEdit.item.text)
+
+    }
+
+  }, [feedbackEdit])
 
   // ------------------------- return
   

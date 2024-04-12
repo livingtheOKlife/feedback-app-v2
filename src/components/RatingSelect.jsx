@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 
 /**--------------------------------------------------------------------------- RatingSelect component function
@@ -19,7 +19,19 @@ function RatingSelect () {
 
   // ------------------------- context
 
-  const { selected, onRatingChange } = useContext(FeedbackContext)
+  const { selected, setSelected, onRatingChange, feedbackEdit } = useContext(FeedbackContext)
+  
+  // ------------------------- side effects
+
+  useEffect(() => {
+    
+    if (feedbackEdit.edit === true) {
+      
+      setSelected(feedbackEdit.item.rating)
+      
+    }
+    
+  }, [feedbackEdit])
 
   // ------------------------- return
 

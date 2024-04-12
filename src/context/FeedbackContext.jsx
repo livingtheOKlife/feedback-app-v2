@@ -50,6 +50,10 @@ export function FeedbackProvider ({ children }) {
     },
 
   ])
+  const [feedbackEdit, setFeedbackEdit] = useState({
+    item: {},
+    edit: false
+  })
 
   /**-------------------------------------------------- onInputChange function
    * 
@@ -194,14 +198,28 @@ export function FeedbackProvider ({ children }) {
 
   }
 
+  /**--------------------------------------------------------------------------- editFeedback */
+
+  const editFeedback = (item) => {
+
+    setFeedbackEdit({
+      item: item,
+      edit: true
+    })
+
+  }
+
   // ------------------------- return
 
   return (
 
     <FeedbackContext.Provider value={{
+      text,
+      setText,
       rating,
       setRating,
       btnDisabled,
+      setBtnDisabled,
       alert,
       selected,
       setSelected,
@@ -211,7 +229,10 @@ export function FeedbackProvider ({ children }) {
       feedback,
       setFeedback,
       addFeedback,
-      deleteFeedback
+      deleteFeedback,
+      editFeedback,
+      feedbackEdit,
+      setFeedbackEdit
     }}>
 
       {children}

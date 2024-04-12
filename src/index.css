@@ -791,6 +791,7 @@ label.copyright {
 #header-container {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.32);
+  z-index: 10;
 }
 #header-container #main-nav {
   display: flex;
@@ -820,6 +821,7 @@ label.copyright {
   width: 100%;
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.32);
+  z-index: 10;
 }
 
 #main-container {
@@ -1026,36 +1028,41 @@ label.copyright {
 #main-container ul li p:first-of-type * {
   color: hsl(210, 0%, 98%);
 }
-#main-container ul li button {
-  font-size: 19px;
+#main-container ul li .ctrl-panel {
   position: absolute;
   top: 12px;
   right: 12px;
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#main-container ul li .ctrl-panel button {
+  font-size: 14px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.16s ease-in-out;
 }
 @media screen and (min-width: 600px) {
-  #main-container ul li button {
-    font-size: 20.52px;
+  #main-container ul li .ctrl-panel button {
+    font-size: 15.12px;
   }
 }
 @media screen and (min-width: 768px) {
-  #main-container ul li button {
-    font-size: 22.1616px;
+  #main-container ul li .ctrl-panel button {
+    font-size: 16.3296px;
   }
 }
 @media screen and (min-width: 992px) {
-  #main-container ul li button {
-    font-size: 23.934528px;
+  #main-container ul li .ctrl-panel button {
+    font-size: 17.635968px;
   }
 }
-#main-container ul li button:hover {
+#main-container ul li .ctrl-panel button:hover {
   background-color: rgba(0, 0, 0, 0.16);
 }
 @media (prefers-color-scheme: dark) {
