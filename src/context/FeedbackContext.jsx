@@ -207,7 +207,19 @@ export function FeedbackProvider ({ children }) {
 
   }
 
-  /**--------------------------------------------------------------------------- editFeedback */
+  /**-------------------------------------------------- editFeedback
+   * 
+   * @name editFeedback
+   * 
+   * @function
+   * 
+   * @description sets (item) to be edited
+   * 
+   * @author livingtheOKlife
+   * 
+   * @date 12.04.2024
+   * 
+   * ------------------------- */
   
   const editFeedback = (item) => {
     
@@ -218,7 +230,19 @@ export function FeedbackProvider ({ children }) {
 
   }
   
-  /**--------------------------------------------------------------------------- updateFeedback */
+  /**-------------------------------------------------- updateFeedback
+   * 
+   * @name updateFeedback
+   * 
+   * @function
+   * 
+   * @description maps through the feedback array and updates the item with a matching id
+   * 
+   * @author livingtheOKlife
+   * 
+   * @date 12.04.2024
+   * 
+   * ------------------------- */
 
   const updateFeedback = (id, updatedItem) => {
 
