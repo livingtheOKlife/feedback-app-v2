@@ -1,20 +1,34 @@
 import { useContext } from 'react'
-
 import FeedbackContext from '../context/FeedbackContext'
-
 import Button from './shared/Button'
-
 import { FaTimes } from 'react-icons/fa'
-
 import RatingSelect from './RatingSelect'
+
+/**--------------------------------------------------------------------------- FeedbackForm component function
+ * 
+ * @name FeedbackForm
+ * 
+ * @function
+ * 
+ * @returns the form for leaving reviews
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
 
 function FeedbackForm () {
 
-  const { onSubmit, setRating, text, onInputChange, btnDisabled, alert } = useContext(FeedbackContext)
+  // ------------------------- context
+
+  const { onFormSubmit, setRating, text, onInputChange, btnDisabled, alert } = useContext(FeedbackContext)
+
+  // ------------------------- return
   
   return (
 
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onFormSubmit}>
 
       <h3>How would you rate our service?</h3>
 
@@ -38,5 +52,7 @@ function FeedbackForm () {
   )
 
 }
+
+// --------------------------------------------------------------------------- FeedbackForm component export
 
 export default FeedbackForm

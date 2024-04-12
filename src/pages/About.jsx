@@ -1,6 +1,22 @@
 import MainContainer from '../components/layout/MainContainer'
 
+/**--------------------------------------------------------------------------- About page function
+ * 
+ * @name About
+ * 
+ * @function
+ * 
+ * @returns contents for the '/about' page
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
+
 function About () {
+
+  // ------------------------- return
 
   return (
 
@@ -17,5 +33,7 @@ function About () {
   )
 
 }
+
+// --------------------------------------------------------------------------- About page export
 
 export default About

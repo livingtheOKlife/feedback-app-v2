@@ -1,10 +1,27 @@
 import { useContext } from 'react'
-
 import FeedbackContext from '../context/FeedbackContext'
+
+/**--------------------------------------------------------------------------- RatingSelect component function
+ * 
+ * @name RatingSelect
+ * 
+ * @function
+ * 
+ * @returns 10 radio buttons for selecting a rating value
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
 
 function RatingSelect () {
 
+  // ------------------------- context
+
   const { selected, onRatingChange } = useContext(FeedbackContext)
+
+  // ------------------------- return
 
   return (
 
@@ -65,5 +82,7 @@ function RatingSelect () {
   )
   
 }
+
+// --------------------------------------------------------------------------- RatingSelect component export
 
 export default RatingSelect

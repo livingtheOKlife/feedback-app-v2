@@ -1,6 +1,24 @@
+/**--------------------------------------------------------------------------- FooterContainer component function
+ * 
+ * @name FooterContainer
+ * 
+ * @function
+ * 
+ * @returns footer#footer-container and its contents
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
+
 function FooterContainer () {
 
+  // ------------------------- year variable
+
   const year = new Date().getFullYear()
+
+  // ------------------------- return
 
   return (
 
@@ -14,5 +32,7 @@ function FooterContainer () {
   )
 
 }
+
+// --------------------------------------------------------------------------- FooterContainer component export
 
 export default FooterContainer

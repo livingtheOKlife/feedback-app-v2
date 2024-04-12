@@ -1,21 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import { FeedbackProvider } from './context/FeedbackContext'
-
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
-
 import HeaderContainer from './components/layout/HeaderContainer'
 import FooterContainer from './components/layout/FooterContainer'
 
-/**--------------------------------------------------------------------------- App application functino
+/**--------------------------------------------------------------------------- App application function
  * 
- * @todo radio input styling on checked
+ * @name App
+ * 
+ * @function
+ * 
+ * @returns contents of the feedback ui application
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
  * 
  * -------------------------------------------------- */
 
 function App () {
+
+  // ------------------------- return
 
   return (
 
@@ -43,5 +50,7 @@ function App () {
   )
   
 }
+
+// --------------------------------------------------------------------------- App application export
 
 export default App

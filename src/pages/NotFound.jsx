@@ -1,8 +1,23 @@
 import { Link } from 'react-router-dom'
-
 import MainContainer from '../components/layout/MainContainer'
 
+/**--------------------------------------------------------------------------- NotFound page function
+ * 
+ * @name NotFound
+ * 
+ * @function
+ * 
+ * @returns contents of the '/not-found' and '/*' pages
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
+
 function NotFound () {
+
+  // ------------------------- return
 
   return (
 
@@ -19,5 +34,7 @@ function NotFound () {
   )
 
 }
+
+// --------------------------------------------------------------------------- NotFound page export
 
 export default NotFound

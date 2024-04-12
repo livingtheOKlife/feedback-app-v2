@@ -1,6 +1,22 @@
 import { Link } from 'react-router-dom'
 
+/**--------------------------------------------------------------------------- HeaderContainer component function
+ * 
+ * @name HeaderContainer
+ * 
+ * @function
+ * 
+ * @returns header#header-container and its contents
+ * 
+ * @author livingtheOKlife
+ * 
+ * @date 12.04.2024
+ * 
+ * -------------------------------------------------- */
+
 function HeaderContainer () {
+
+  // ------------------------- return
 
   return (
 
@@ -24,5 +40,7 @@ function HeaderContainer () {
   )
   
 }
+
+// --------------------------------------------------------------------------- HeaderContainer component export
 
 export default HeaderContainer
