@@ -1505,6 +1505,7 @@ label.copyright {
   font-size: 24px;
 }
 #header-container #main-nav .links a {
+  font-size: 22px;
   transition: all 0.16s ease-in-out;
 }
 @media (prefers-color-scheme: dark) {
