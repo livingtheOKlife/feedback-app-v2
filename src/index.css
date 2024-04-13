@@ -814,7 +814,7 @@ label.copyright {
   gap: 6px;
 }
 
-.gap-8, #main-container.not-found, #main-container.about {
+.gap-8, #main-container.about {
   gap: 8px;
 }
 
@@ -822,7 +822,7 @@ label.copyright {
   gap: 12px;
 }
 
-.gap-16 {
+.gap-16, #main-container.not-found {
   gap: 16px;
 }
 
@@ -1218,7 +1218,7 @@ label.copyright {
   margin-right: 16px;
 }
 
-.mt-16 {
+.mt-16, #main-container.not-found .btn {
   margin-top: 16px;
 }
 
@@ -1252,7 +1252,7 @@ label.copyright {
   margin-right: 32px;
 }
 
-.mt-32, #main-container.home section, #main-container.not-found .btn, #main-container.about p.me {
+.mt-32, #main-container.home section, #main-container.about p.me {
   margin-top: 32px;
 }
 
