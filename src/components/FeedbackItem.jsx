@@ -37,12 +37,12 @@ function FeedbackItem ({ item }) {
 
       <div className="ctrl-panel">
         
-        <button onClick={() => deleteFeedback(item.id)}>
-          <FaTimes />
-        </button>
-        
         <button onClick={() => editFeedback(item)}>
           <FaEdit />
+        </button>
+        
+        <button onClick={() => deleteFeedback(item.id)}>
+          <FaTimes />
         </button>
 
       </div>
