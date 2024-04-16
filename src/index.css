@@ -514,15 +514,9 @@ a:not(.btn):hover {
   color: hsl(210, 0%, 98%);
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
-.btn.btn-main *, .icon-btn.btn-main * {
-  color: hsl(210, 0%, 98%);
-}
 @media (prefers-color-scheme: dark) {
   .btn.btn-main, .icon-btn.btn-main {
     background-color: hsl(32, 96%, 48%);
-    color: hsl(210, 0%, 98%);
-  }
-  .btn.btn-main *, .icon-btn.btn-main * {
     color: hsl(210, 0%, 98%);
   }
 }
@@ -782,7 +776,7 @@ label.copyright {
   left: 0;
 }
 
-.flex, .App, #footer-container, #header-container #main-nav, #main-container.home ul li .ctrl-panel button, #main-container.home ul li .ctrl-panel, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home section, #main-container.home form p.xs .bg, #main-container.home form p.xs, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
+.flex, .App, #footer-container, #header-container #main-nav, #main-container.home ul li .ctrl-panel, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home section, #main-container.home form p.xs .bg, #main-container.home form p.xs, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
   display: flex;
 }
 
@@ -798,11 +792,11 @@ label.copyright {
   justify-content: space-between;
 }
 
-.justify-center, #footer-container, #main-container.home ul li .ctrl-panel button, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home form p.xs .bg, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
+.justify-center, #footer-container, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home form p.xs .bg, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
   justify-content: center;
 }
 
-.align-center, #footer-container, #header-container #main-nav, #main-container.home ul li .ctrl-panel button, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home section, #main-container.home form p.xs .bg, #main-container.home form p.xs, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
+.align-center, #footer-container, #header-container #main-nav, #main-container.home ul li p:first-of-type, #main-container.home ul, #main-container.home section, #main-container.home form p.xs .bg, #main-container.home form p.xs, #main-container.home form .rating-select label, #main-container.home form .rating-select, #main-container.home form, #main-container.not-found, #main-container.about {
   align-items: center;
 }
 
@@ -912,11 +906,11 @@ label.copyright {
   height: 16px;
 }
 
-.w-24, #main-container.home ul li .ctrl-panel button {
+.w-24 {
   width: 24px;
 }
 
-.h-24, #main-container.home ul li .ctrl-panel button {
+.h-24 {
   height: 24px;
 }
 
@@ -1096,7 +1090,7 @@ label.copyright {
   border-radius: 50%;
 }
 
-.br-4, #main-container.home ul li .ctrl-panel button {
+.br-4 {
   border-radius: 4px;
 }
 
@@ -1380,23 +1374,14 @@ label.copyright {
   font-weight: 600;
   transition: all 0.16s ease-in-out;
 }
-#main-container.home form .rating-select label * {
-  color: hsl(210, 0%, 98%);
-}
 @media (prefers-color-scheme: dark) {
   #main-container.home form .rating-select label {
     background-color: #a05703;
     color: hsl(210, 0%, 98%);
   }
-  #main-container.home form .rating-select label * {
-    color: hsl(210, 0%, 98%);
-  }
 }
 #main-container.home form .rating-select input[type=radio]:checked + label {
   background-color: hsl(92, 64%, 48%);
-  color: hsl(210, 0%, 98%);
-}
-#main-container.home form .rating-select input[type=radio]:checked + label * {
   color: hsl(210, 0%, 98%);
 }
 #main-container.home form p.xs {
@@ -1407,14 +1392,8 @@ label.copyright {
     background-color: hsl(210, 0%, 98%);
     color: hsl(210, 100%, 2%);
   }
-  #main-container.home form * {
-    color: hsl(210, 100%, 2%);
-  }
   #main-container.home form .btn {
     background-color: hsl(32, 96%, 48%);
-    color: hsl(210, 0%, 98%);
-  }
-  #main-container.home form .btn * {
     color: hsl(210, 0%, 98%);
   }
 }
@@ -1449,15 +1428,9 @@ label.copyright {
   left: -20px;
   font-size: 19px;
 }
-#main-container.home ul li p:first-of-type * {
-  color: hsl(210, 0%, 98%);
-}
 @media (prefers-color-scheme: dark) {
   #main-container.home ul li p:first-of-type {
     background-color: hsl(32, 96%, 48%);
-    color: hsl(210, 0%, 98%);
-  }
-  #main-container.home ul li p:first-of-type * {
     color: hsl(210, 0%, 98%);
   }
 }
@@ -1465,35 +1438,9 @@ label.copyright {
   top: 12px;
   right: 12px;
 }
-#main-container.home ul li .ctrl-panel button {
-  font-size: 14px;
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.16s ease-in-out;
-}
-@media screen and (min-width: 600px) {
-  #main-container.home ul li .ctrl-panel button {
-    font-size: 15.12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #main-container.home ul li .ctrl-panel button {
-    font-size: 16.3296px;
-  }
-}
-@media screen and (min-width: 992px) {
-  #main-container.home ul li .ctrl-panel button {
-    font-size: 17.635968px;
-  }
-}
-#main-container.home ul li .ctrl-panel button:hover {
-  background-color: rgba(0, 0, 0, 0.16);
-}
 @media (prefers-color-scheme: dark) {
   #main-container.home ul li {
     background-color: hsl(210, 0%, 98%);
-    color: hsl(210, 100%, 2%);
-  }
-  #main-container.home ul li * {
     color: hsl(210, 100%, 2%);
   }
 }
@@ -1533,21 +1480,55 @@ label.copyright {
   scale: 1;
 }
 
+.ctrl-btn {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  transition: all 0.16s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+  .ctrl-btn {
+    font-size: 12.96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ctrl-btn {
+    font-size: 13.9968px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ctrl-btn {
+    font-size: 15.116544px;
+  }
+}
+.ctrl-btn.btn-light {
+  background-color: rgba(0, 0, 0, 0);
+  color: hsl(210, 100%, 2%);
+}
+.ctrl-btn.btn-light:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.ctrl-btn.btn-dark {
+  background-color: rgba(255, 255, 255, 0);
+  color: hsl(210, 0%, 98%);
+}
+.ctrl-btn.btn-dark:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 .App {
   background-color: hsl(210, 0%, 98%);
   color: hsl(210, 100%, 2%);
   height: 100dvh;
   width: 100dvw;
 }
-.App * {
-  color: hsl(210, 100%, 2%);
-}
 @media (prefers-color-scheme: dark) {
   .App {
     background-color: #011428;
-    color: hsl(210, 0%, 98%);
-  }
-  .App * {
     color: hsl(210, 0%, 98%);
   }
 }/*# sourceMappingURL=index.css.map */
